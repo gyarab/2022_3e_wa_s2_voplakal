@@ -22,4 +22,5 @@ Hornbach je nadnárodní hobby market, působící i na trhu České republiky.
  - Purpurová byla kdysi velmi vzácnou barvou a používala se na barvení luxusních látek. Purpurová bývá spojována s bohatstvím a mocí. Evokuje rozbouření emocí.
 
 
-
+##### Zdroj informací
+[Psychologie barev](http://www.jinudy.cz/clanky/psychologie-barev)
