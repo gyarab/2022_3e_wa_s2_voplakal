@@ -3,7 +3,7 @@ Hornbach je nadnárodní hobby market, působící i na trhu České republiky.
 
 ## Barvy loga
 ![logo](https://www.paderfutternapf.de/wp-content/uploads/2016/07/Hornbach_Logo_black.svg.png)
-- bílý text na oranžovém obsahu
+- bílý text na oranžovém podkladu
 - napravo fialový čtverec s oranžovým šrafováním
 ### Barvy
 - ![#f03c15](https://via.placeholder.com/15/f7911a/f7911a.png) `#f7911a`
