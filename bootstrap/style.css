@@ -1,0 +1,40 @@
+ul.menu {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.menu li {
+    display: inline-block; 
+}
+
+.menu a {
+    background-color: lightskyblue;
+    margin: 5px 10px 5px 0;
+    padding: 5px 10px;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    background-color: aquamarine;
+}
+
+.hero-image {
+    background-image: url('./cover.jpg');
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.skrtnuty {
+    text-decoration:line-through;
+}
+
+img {
+    height: 400px;
+    width: 800px;
+}
+
+th, td {
+    border: 1px solid black;
+}
