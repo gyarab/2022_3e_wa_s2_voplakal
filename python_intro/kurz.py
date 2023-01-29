@@ -1,35 +1,50 @@
 import httpx
-from pprint import pprint
 
 url = "https://www.cnb.cz/cs/financni-trhy/devizovy-trh/kurzy-devizoveho-trhu/kurzy-devizoveho-trhu/denni_kurz.txt"
-
 res = httpx.get(url)
-
 rows = res.text.split("\n")
-rows[-3]  # od konce
-rows[1:3]
-# slicing vrátí pole od provku s indexem 1 do prvku s indexem 2 tzn konec není zahrnut
 
 rows = rows[2:-1]
+
+def convert_from_czk():   
+    user_amount = input("Zadej částku v CZK: ")
+    user_amount = float(user_amount)
+    user_curr = input("Zadej cílovou měnu: ")
+    if data.get(user_curr) == None:
+        print("Tato měna není k dispozici.\n")
+        return
+    result = user_amount / data[user_curr]
+    result = round(result, 2)
+
+    print(f"Vysledna castka je {result} {user_curr}")
+    
+def convert_to_czk(curr_in):
+    if data.get(curr_in) == None:
+        print("Tato měna není k dispozici.\n")
+        return
+    user_amount_in = input("Zadej částku v "+curr_in+": ")
+    user_amount_in = float(user_amount_in)
+
+    result = user_amount_in * data[curr_in]
+    result = round(result, 2)
+
+    print(f"Vysledna castka je {result} CZK.")
+
 data = {}
+
 for r in rows:
-    cols = r.split('|')
-    currency = cols[-2]
+    cols = r.split("|")
+    amount = cols[-3]
+    curr = cols[-2]
     rate = cols[-1]
-    rate = rate.replace(',', '.')
-    rate = float(rate)
+    rate = rate.replace(",", ".")
+    rate = float(rate) / float(amount)
+    data[curr] = rate
 
-    data[currency] = rate
-
-print(data)
-pprint(data)
-
-
-user_amount = float((input("Zadej castku ")))
-
-user_source = "CZK"
-user_target = input("zadej cilovou menu ")
-
-result = user_amount / data[user_target]
-result = round(result, 3)
-print(f"Vysledek je {result} {user_target}.")
+while True:
+    user_curr_in = input("Zadejte vstupní měnu:")
+    if user_curr_in == "CZK":
+        convert_from_czk()
+    else:
+        convert_to_czk(user_curr_in)
+    print("\n")
