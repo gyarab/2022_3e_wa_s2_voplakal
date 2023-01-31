@@ -1,0 +1,5 @@
+site_name : Gyarab
+site_url: "htts://example.com/"
+docs_dir: pages
+theme:
+  name: readthedocs
